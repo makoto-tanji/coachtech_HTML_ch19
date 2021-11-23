@@ -7,13 +7,24 @@
   <title>HTML 19章演習問題</title>
 </head>
 <body>
+  <nav>
+    <h1>株式会社TECH</h1>
+    <ul>
+      <!-- #はURLフラグメント 見出しのIDにとべる -->
+      <li><a href="HTML_ch19.html">ホーム</a></li>
+      <li><a href="#">企業情報</a></li>
+      <li><a href="#c_overview">会社概要</a></li>
+      <li><a href="#">よくある質問</a></li>
+      <li><a href="#contact_form">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
   <img src="./mv.png/mv.png" alt="サンプル画像">
   <p>最新のテクノロジーで<em>社会課題</em>を解決</p>
 
-  <h1>会社概要</h1>
+  <h1 id="c_overview">会社概要</h1>
 
   <!--HTML 17章 Emmet  tr*6>th+td -->
-
   <table>
     <tr>
       <th>会社名</th>
@@ -40,7 +51,7 @@
       <td>1000万円</td>
     </tr>
   </table>
-  <h1>お問い合わせ</h1>
+  <h1 id="contact_form">お問い合わせ</h1> <!-- idではなくnameの方がいいかも -->
 
   <form action="HTML_ch19.html" method="get">
     <!-- for属性を使ってラベルタグに部品を関連づけるパターン -->
@@ -56,6 +67,8 @@
     <label>
       お問い合わせ内容<textarea name="textarea" cols="80" rows="10"></textarea>
     </label><br>
+
+    <input type="submit" value="お申し込み">
   </form>
 </body>
 </html>
