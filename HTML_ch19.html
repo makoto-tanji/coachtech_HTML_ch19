@@ -1,80 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML 19章演習問題</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>株式会社TECH</h1>
-      <ul>
-        <!-- #はURLフラグメント 見出しのIDにとべる -->
-        <li><a href="HTML_ch19.html">ホーム</a></li>
-        <li><a href="#">企業情報</a></li>
-        <li><a href="#c_overview">会社概要</a></li>
-        <li><a href="#">よくある質問</a></li>
-        <li><a href="#contact_form">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 19章演習問題</title>
+  </head>
+  <body>
+    
+    <header>
+      <nav>
+        <h1>株式会社TECH</h1>
+        <ul>
+          <!-- #はURLフラグメント 見出しのIDにとべる -->
+          <li><a href="HTML_ch19.html">ホーム</a></li>
+          <li><a href="#">企業情報</a></li>
+          <li><a href="#c_overview">会社概要</a></li>
+          <li><a href="#">よくある質問</a></li>
+          <li><a href="#contact_form">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <img src="./mv.png/mv.png" alt="サンプル画像">
+    <p>最新のテクノロジーで<em>社会課題</em>を解決</p>
 
-  <img src="./mv.png/mv.png" alt="サンプル画像">
-  <p>最新のテクノロジーで<em>社会課題</em>を解決</p>
+    <h1 id="c_overview">会社概要</h1>
 
-  <h1 id="c_overview">会社概要</h1>
+    <!--HTML 17章 Emmet  tr*6>th+td -->
+    <table>
+      <tr>
+        <th>会社名</th>
+        <td>株式会社TECH</td>
+      </tr>
+      <tr>
+        <th>代表者</th>
+        <td>山田 太郎</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>東京都渋谷区神宮前</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2019/07/17</td>
+      </tr>
+      <tr>
+        <th>従業員数</th>
+        <td>100人</td>
+      </tr>
+      <tr>
+        <th>資本金</th>
+        <td>1000万円</td>
+      </tr>
+    </table>
+    <h1 id="contact_form">お問い合わせ</h1>
 
-  <!--HTML 17章 Emmet  tr*6>th+td -->
-  <table>
-    <tr>
-      <th>会社名</th>
-      <td>株式会社TECH</td>
-    </tr>
-    <tr>
-      <th>代表者</th>
-      <td>山田 太郎</td>
-    </tr>
-    <tr>
-      <th>所在地</th>
-      <td>東京都渋谷区神宮前</td>
-    </tr>
-    <tr>
-      <th>設立</th>
-      <td>2019/07/17</td>
-    </tr>
-    <tr>
-      <th>従業員数</th>
-      <td>100人</td>
-    </tr>
-    <tr>
-      <th>資本金</th>
-      <td>1000万円</td>
-    </tr>
-  </table>
-  <h1 id="contact_form">お問い合わせ</h1> <!-- idではなくnameの方がいいかも -->
+    <form action="HTML_ch19.html" method="get">
+      <!-- for属性を使ってラベルタグに部品を関連づけるパターン -->
+      <label for="c_name">会社名</label>
+      <input type="text"　name="c_name" id="c_name">　<br>
+      <!-- ラベルタグにラベルと部品の両方を囲むパターン -->
+      <label>
+        お名前<input type="text" name="name">
+      </label><br>
+      <label>
+        メールアドレス<input type="text" name="mail_address">
+      </label><br>
+      <label>
+        お問い合わせ内容<textarea name="textarea" cols="80" rows="10"></textarea>
+      </label><br>
+      <input type="submit" value="お申し込み">
+    </form>
 
-  <form action="HTML_ch19.html" method="get">
-    <!-- for属性を使ってラベルタグに部品を関連づけるパターン -->
-    <label for="c_name">会社名</label>
-    <input type="text"　name="c_name" id="c_name">　<br>
-    <!-- ラベルタグにラベルと部品の両方を囲むパターン -->
-    <label>
-      お名前<input type="text" name="name">
-    </label><br>
-    <label>
-      メールアドレス<input type="text" name="mail_address">
-    </label><br>
-    <label>
-      お問い合わせ内容<textarea name="textarea" cols="80" rows="10"></textarea>
-    </label><br>
-
-    <input type="submit" value="お申し込み">
-  </form>
-  <footer>
-    <small>&copy; 2020 TECH inc.</small>
-  </footer>
-</body>
+    <footer>
+      <small>&copy; 2020 TECH inc.</small>
+    </footer>
+  </body>
 </html>
